@@ -1,6 +1,35 @@
 @import "./header.css";
 @import "./reset.css";
+@import "../variables/global.css";
+@import "../page/home/partial/index.css";
 
 html{
     font-size: 16px;
 }
+
+/* *{
+    border: 1px solid black !important;
+} */
+
+.flex-column-cc{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.flex-column-c{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+body{
+    max-width: 576px;
+    margin: 0 auto;    
+}
+
+.page{
+    padding: 1.2em 1em 0;
+}
+
