@@ -1,6 +1,17 @@
 
 
-const createThereIsNoQuiz = ()=>{
+export const createHome = ()=>{
+    const app = document.querySelector('.app');
+
+    const home = document.createElement('div');
+    home.classList.add('home');
+    home.classList.add('page');
+    home.classList.add('flex-column-c');
+
+    app.appendChild(home);
+}
+
+export const createThereIsNoQuiz = ()=>{
     const home = document.querySelector(".home");
 
     if (!home) {
@@ -17,7 +28,7 @@ const createThereIsNoQuiz = ()=>{
 
 }
 
-const createQuiz = (dad)=>{
+export const createQuiz = (dad)=>{
     const container = document.querySelector(dad);
 
     if (!container) {
@@ -40,7 +51,7 @@ const createQuiz = (dad)=>{
     }
 }
 
-const createContainerQuiz = (title, className)=>{
+export const createContainerQuiz = (title, className)=>{
     const home = document.querySelector(".home");
 
     if (!home) {
@@ -60,10 +71,3 @@ const createContainerQuiz = (title, className)=>{
     home.appendChild(containerInPage);
 }
 
-createThereIsNoQuiz();
-
-createContainerQuiz("Seus quizes","yourQuizes");
-createContainerQuiz("Todos os quizes", "allQuizes");
-
-createQuiz(".yourQuizes");
-createQuiz(".allQuizes");
