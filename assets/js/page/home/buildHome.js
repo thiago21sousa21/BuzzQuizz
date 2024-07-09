@@ -28,27 +28,27 @@ export const createThereIsNoQuiz = ()=>{
 
 }
 
-export const createQuiz = (dad)=>{
+export const createQuiz = (dad, data) =>{
     const container = document.querySelector(dad);
-
-    if (!container) {
-        console.error("Container element not found!");
-        return;
-    }
-
-    for (let index = 0; index < 1; index++) {
+    for (let i = 0; i < data.length ; i++) {
         const newQuiz = document.createElement("div");
         newQuiz.classList.add("quiz");
+        newQuiz.style.backgroundImage = `url(${data[i].image})`;
 
-        const color = `#${index}${index}${index}000`;
-           
-        if (typeof newQuiz.style.backgroundColor === 'string') {
-            newQuiz.style.backgroundColor = color;
-        } else {
-            console.error("backgroundColor is not a string property");
-        }
+        const titleQuiz = document.createElement('h3');
+        titleQuiz.innerText = `${data[i].title}`;
+        newQuiz.appendChild(titleQuiz)
+
         container.appendChild(newQuiz);
     }
+}
+
+export const insertTitleQuiz = ()=>{
+
+}
+
+export const createQuizLoop = (dad, data)=>{
+    createQuiz(dad, data);
 }
 
 export const createContainerQuiz = (title, className)=>{
