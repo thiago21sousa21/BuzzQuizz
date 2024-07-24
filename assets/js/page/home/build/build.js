@@ -1,6 +1,8 @@
+import { page } from "../../index.js";
 
 
 export const createHome = ()=>{
+    //futuramente criar uma função que crie qualquer um molde para qualquer página
     const app = document.querySelector('.app');
 
     const home = document.createElement('div');
@@ -39,7 +41,15 @@ export const createQuiz = (dad, data) =>{
         titleQuiz.innerText = `${data[i].title}`;
         newQuiz.appendChild(titleQuiz)
 
+        newQuiz.id = data[i].id;
+
         container.appendChild(newQuiz);
+        
+        newQuiz.addEventListener("click", ()=>{
+           const getHome = document.querySelector('.home');
+           getHome.classList.add('displayNone');
+           page.openedQuiz.execute.executeOpenQuizPage();           
+        })
     }
 }
 

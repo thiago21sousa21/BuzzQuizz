@@ -1,3 +1,8 @@
-export * as buildHome from "./buildHome.js";
-export * as executeHome from "./executeHome.js";
-export * as apiHome from "./apiHome.js";
+import * as api from "./api/api.js";
+import * as execute from "./execute/home.js";
+import * as build from "./build/build.js";
+export const home = {
+    api,
+    execute,
+    build
+}

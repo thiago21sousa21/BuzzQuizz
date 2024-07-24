@@ -1,7 +1,7 @@
 @import "./header.css";
 @import "./reset.css";
 @import "../variables/global.css";
-@import "../page/home/partial/index.css";
+@import "../page/index.css";
 
 html{
     font-size: 16px;
@@ -44,4 +44,8 @@ h3{
 
 .containerInPage{
     width: 100%;    
+}
+
+.displayNone{
+    display: none;
 }
