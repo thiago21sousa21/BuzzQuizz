@@ -1,8 +1,13 @@
 
-export const CreateImgOpenQuizImage = () =>{
-    const app = document.querySelector('.app');
-    const image = document.createElement('img');
-    app.appendChild(image)
+
+
+export const CreateImgOpenQuizImage = (url) =>{
+   const OpenedQuizPage = document.querySelector(".OpenedQuizPage");
+   const img = document.createElement("img");
+   img.classList.add("mainImageQuiz");
+   img.src = url;
+   OpenedQuizPage.appendChild(img);
+
 }
 
 export const createOpenQuizPage = ()=>{
@@ -16,6 +21,6 @@ export const createOpenQuizPage = ()=>{
 
     app.appendChild(OpenedQuiz);
 
-    CreateImgOpenQuizImage();
+    CreateImgOpenQuizImage("https://http2.mlstatic.com/D_NQ_NP_631697-MLU70103683159_062023-O.webp");
 }
 
